@@ -1,0 +1,6 @@
+.idea/
+output/
+build/
+
+*.o
+*.a

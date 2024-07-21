@@ -7,12 +7,18 @@ project(cutio-ctest
     LANGUAGES C
 )
 
-# Main target
-add_executable(${PROJECT_NAME})
-
+add_library(${PROJECT_NAME})
 target_sources(${PROJECT_NAME}
+    PRIVATE cutio-ctest.c
+)
+
+add_executable(cutio-ctest_example)
+
+target_sources(cutio-ctest_example
     PRIVATE cutio-ctest_example.c
 )
+
+target_link_libraries(cutio-ctest_example cutio-ctest)
 
 target_include_directories(${PROJECT_NAME}
     PUBLIC

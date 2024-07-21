@@ -13,11 +13,9 @@ how to use this framework.
 
 ```shell
 cd cutio-ctest
-mkdir build
-cd build
-cmake ..
-make
-./cutio-ctest
+cmake -B build
+cmake --build output
+./output/cutio-ctest_example
 ```
 
 # Authors
